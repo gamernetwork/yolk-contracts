@@ -1,0 +1,22 @@
+{
+    "name":        "gamernetwork/yolk-contracts",
+    "description": "Gamer Network's interface library",
+    "keywords":    ["framework", "eurogamer", "gamer network"],
+    "license":     "MIT",
+    "authors": [
+        {
+            "name":         "Simon Downes",
+            "email":        "simon.downes@gamer-network.net",
+            "homepage":     "http://simondownes.co.uk",
+            "role":         "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+    	"psr-4": {
+            "yolk\\contracts\\": ""
+        }
+    }
+}
