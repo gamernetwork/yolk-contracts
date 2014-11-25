@@ -57,14 +57,21 @@ interface ProfilerInterface {
 	/**
 	 * Return the elapsed time of the specified timer.
 	 * @param  string $timer
-	 * @return self
+	 * @return float
 	 */
 	public function getElapsed( $timer = '' );
 
 	/**
+	 * Return the total elapsed time of the specified timer.
+	 * @param  string $timer
+	 * @return float
+	 */
+	public function getTotalElapsed( $timer = '' );
+
+	/**
 	 * Mark the current point in time with a label.
 	 * @param  string $name unique name used to label the mark.
-	 * @return self
+	 * @return Mark
 	 */
 	public function mark( $name = '' );
 
