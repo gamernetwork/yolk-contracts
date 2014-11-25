@@ -97,6 +97,12 @@ interface ProfilerInterface {
 	 */
 	public function getData();
 
+	/**
+	 * Return HTML required to show the profiler.
+	 * @return string
+	 */
+	public function getHTML();
+
 }
 
 // EOF
