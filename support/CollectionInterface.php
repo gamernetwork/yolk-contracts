@@ -31,6 +31,14 @@ interface CollectionInterface extends Arrayable, Jsonable, \IteratorAggregate, \
 	public function find( FilterInterface $filter );
 
 	/**
+	 * Find the first item matching the specified filter.
+	 *
+	 * @param  FilterInterface $filter
+	 * @return mixed
+	 */
+	public function findFirst( FilterInterface $filter );
+
+	/**
 	 * Remove all the items from the collection.
 	 * @return self
 	 */
@@ -46,21 +54,21 @@ interface CollectionInterface extends Arrayable, Jsonable, \IteratorAggregate, \
 	/**
 	 * Add a new item to the collection.
 	 * @param mixed $item
-	 * @return  self
+	 * @return self
 	 */
 	public function add( $item );
 
 	/**
 	 * Remove the specified item from the collection.
 	 * @param  mixed $item
-	 * @return this
+	 * @return self
 	 */
 	public function remove( $item );
 
 	/**
 	 * Remove the items that match the specified filter.
 	 * @param  FilterInterface $filter
-	 * @return this
+	 * @return self
 	 */
 	public function removeMany( FilterInterface $filter );
 
