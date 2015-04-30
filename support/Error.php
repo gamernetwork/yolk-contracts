@@ -38,7 +38,7 @@ class Error {
 
 	/**
 	 * Return the correct error constant for a specified type.
-	 * @param  string $type One of the constants from yolk\util\Type.
+	 * @param  string $type   One of the constants from yolk\contracts\support\Type.
 	 * @return string
 	 */
 	public static function getTypeError( $type ) {
