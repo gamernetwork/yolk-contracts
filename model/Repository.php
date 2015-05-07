@@ -11,12 +11,12 @@
 
 namespace yolk\contracts\model;
 
-use yolk\contracts\support\CollectionInterface;
+use yolk\contracts\support\Collection;
 
 /**
  * Repositories act as in-memory collections of entities.
  */
-interface RepositoryInterface extends CollectionInterface {
+interface Repository extends Collection {
 
 	/**
 	 * Find the entity with the specified id.

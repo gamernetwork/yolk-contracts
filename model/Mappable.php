@@ -14,6 +14,14 @@ namespace yolk\contracts\model;
 interface Mappable {
 
 	/**
+	 * Returns the Fieldset containing the properties and rules for the mappable object.
+	 * Providing this as a static method enables us to extract the property definitions of an
+	 * object without having to actually create an instance of it.
+	 * @return \yolk\support\Fieldset
+	 */
+	public static function getProperties();
+
+	/**
 	 * Insert/set data into the mappable object.
 	 * @return void
 	 */

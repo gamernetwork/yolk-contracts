@@ -42,6 +42,7 @@ class Type {
 
 	// related types
 	const OBJECT     = 'object';
+	const ENTITY     = 'ENTITY';
 	const COLLECTION = 'collection';
 
 	private function __construct() {}
