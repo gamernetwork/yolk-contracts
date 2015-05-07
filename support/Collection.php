@@ -14,29 +14,29 @@ namespace yolk\contracts\support;
 /**
  * Basic collection interface.
  */
-interface CollectionInterface extends Arrayable, Jsonable, \IteratorAggregate, \Countable {
+interface Collection extends Arrayable, Jsonable, \IteratorAggregate, \Countable {
 
 	/**
 	 * Return the number of items in the collection, optionally that match the specified filter.
-	 * @param  FilterInterface|null $filter
+	 * @param  Filter|null $filter
 	 * @return integer
 	 */
-	public function count( FilterInterface $filter = null );
+	public function count( Filter $filter = null );
 
 	/**
 	 * Return a new collection containing the items that match the specified filter.
-	 * @param  FilterInterface $filter
+	 * @param  Filter $filter
 	 * @return Collection
 	 */
-	public function find( FilterInterface $filter );
+	public function find( Filter $filter );
 
 	/**
 	 * Find the first item matching the specified filter.
 	 *
-	 * @param  FilterInterface $filter
+	 * @param  Filter $filter
 	 * @return mixed
 	 */
-	public function findFirst( FilterInterface $filter );
+	public function findFirst( Filter $filter );
 
 	/**
 	 * Remove all the items from the collection.
@@ -67,10 +67,10 @@ interface CollectionInterface extends Arrayable, Jsonable, \IteratorAggregate, \
 
 	/**
 	 * Remove the items that match the specified filter.
-	 * @param  FilterInterface $filter
+	 * @param  Filter $filter
 	 * @return self
 	 */
-	public function removeMany( FilterInterface $filter );
+	public function removeMany( Filter $filter );
 
 }
 

@@ -18,17 +18,16 @@ trait ProfilerAwareTrait {
 
 	/**
 	 * Profiler instance.
-	 * @var ProfilerInterface
-	 */
+	 * @var Profiler	 */
 	protected $profiler;
 	
 	/**
 	 * Inject a profiler object.
 	 *
-	 * @param   ProfilerInterface   $profiler
+	 * @param   Profiler   $profiler
 	 * @return  self
 	 */
-	public function setProfiler( ProfilerInterface $profiler = null ) {
+	public function setProfiler( Profiler $profiler = null ) {
 		$this->profiler = $profiler;
 		return $this;
 	}

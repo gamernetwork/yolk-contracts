@@ -11,7 +11,7 @@
 
 namespace yolk\contracts\database;
 
-interface ConnectionInterface {
+interface DatabaseConnection {
 
 	/**
 	 * Open the database connection.

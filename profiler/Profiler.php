@@ -14,7 +14,7 @@ namespace yolk\contracts\profiler;
 /**
  * Simple profiler class for recording code execution time, memory usage and database queries.
  */
-interface ProfilerInterface {
+interface Profiler {
 
 	/**
 	 * Create a new profiler instance.

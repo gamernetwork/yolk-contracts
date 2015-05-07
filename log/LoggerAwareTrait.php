@@ -20,14 +20,14 @@ trait LoggerAwareTrait {
 
 	/**
 	 * Log instance.
-	 * @var LoggerInterface
+	 * @var Psr\Log\LoggerInterface
 	 */
 	protected $log;
 	
 	/**
 	 * Inject a logger object.
 	 *
-	 * @param   LoggerInterface   $log
+	 * @param   Psr\Log\LoggerInterface   $log
 	 * @return  self
 	 */
 	public function setLogger( LoggerInterface $log = null ) {

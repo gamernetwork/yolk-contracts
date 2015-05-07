@@ -11,7 +11,7 @@
 
 namespace yolk\contracts\support;
 
-interface FilterInterface {
+interface Filter {
 
 	/**
 	 * Get the filter criteria.

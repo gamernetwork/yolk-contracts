@@ -14,7 +14,7 @@ namespace yolk\contracts\profiler;
 /**
  * Simple timer implementation.
  */
-interface TimerInterface {
+interface Timer {
 
 	/**
 	 * Start the timer.

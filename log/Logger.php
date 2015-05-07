@@ -11,18 +11,13 @@
 
 namespace yolk\contracts\log;
 
+use Psr\Log\LoggerInterface as PSRLoggerInterface;
+
 /**
- * Interface for logger factory class.
+ * Yolk-specific logger interface
  */
-interface LoggerFactoryInterface {
-
-	/**
-	 * Create a logger instance based on a configuration.
-	 * @param  array|string $config
-	 * @return LoggerInterface
-	 */
-	public function create( $config );
-
+interface Logger extends PSRLoggerInterface {
+   
 }
 
 // EOF

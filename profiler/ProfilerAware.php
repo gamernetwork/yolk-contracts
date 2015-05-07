@@ -9,15 +9,21 @@
  * https://github.com/gamernetwork/yolk-contracts
  */
 
-namespace yolk\contracts\log;
-
-use Psr\Log\LoggerInterface as PSRLoggerInterface;
+namespace yolk\contracts\profiler;
 
 /**
- * Yolk-specific logger interface
+ * Interface to indicate a class supports profiling.
  */
-interface LoggerInterface extends PSRLoggerInterface {
-   
+interface ProfilerAware {
+
+	/**
+	 * Inject a profiler object.
+	 *
+	 * @param   Profiler   $profiler
+	 * @return  self
+	 */
+	public function setProfiler( Profiler $profiler = null );
+
 }
 
 // EOF

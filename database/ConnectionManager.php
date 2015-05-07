@@ -11,14 +11,14 @@
 
 namespace yolk\contracts\database;
 
-interface ConnectionManagerInterface {
+interface ConnectionManager {
 
 	/**
 	 * Add a new connection to the manager.
 	 * If an instance of DSN is specified a suitable connection object will be created automatically.
 	 * @param string $name
-	 * @param ConnectionInterface|DSN $connection an instance of ConnectionInterface or DSN
-	 * @return ConnectionInterface
+	 * @param DatabaseConnection|DSN $connection an instance of DatabaseConnection or DSN
+	 * @return DatabaseConnection
 	 */
 	public function add( $name, $connection );
 
@@ -32,7 +32,7 @@ interface ConnectionManagerInterface {
 	/**
 	 * Return the specified connection.
 	 * @param  string $name
-	 * @return ConnectionInterface
+	 * @return DatabaseConnection
 	 */
 	public function get( $name );
 
