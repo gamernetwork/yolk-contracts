@@ -14,7 +14,7 @@ namespace yolk\contracts\model;
 use yolk\contracts\support\Filter;
 
 /**
- * Mapper handles mapping entities to and from an underlying datastore.
+ * Mappers handle mapping objects to and from an underlying datastore.
  */
 interface Mapper {
 

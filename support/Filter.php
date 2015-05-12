@@ -13,6 +13,9 @@ namespace yolk\contracts\support;
 
 interface Filter {
 
+	const SORT_ASC  = true;
+	const SORT_DESC = false;
+
 	/**
 	 * Get the filter criteria.
 	 * @return array
