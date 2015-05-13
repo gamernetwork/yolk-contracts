@@ -59,7 +59,7 @@ class Error {
 			Type::OBJECT    => static::VALUE,
 		];
 
-		return isset($data[$type]) ? $data[$type] : static::NONE;
+		return isset($data[$type]) ? $data[$type] : static::VALUE;
 
 	}
 

@@ -39,11 +39,7 @@ class Type {
 	const SET        = 'set';
 	const JSON       = 'json';
 	const CUSTOM     = 'custom';
-
-	// related types
 	const OBJECT     = 'object';
-	const ENTITY     = 'ENTITY';
-	const COLLECTION = 'collection';
 
 	private function __construct() {}
 
