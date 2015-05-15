@@ -27,24 +27,24 @@ interface Repository extends Collection {
 	public function findById( $id );
 
 	/**
-	 * Return an array of entities whose $field has value $value, with optional ordering, offset and limit.
-	 * @param  string  $field  the field to test
-	 * @param  mixed   $value  the value matching fields should have
+	 * Return an array of entities whose $property has value $value, with optional ordering, offset and limit.
+	 * @param  string  $property  the property to test
+	 * @param  mixed   $value     the value matching properties should have
 	 * @param  string  $order
 	 * @param  integer $limit
 	 * @param  integer $offset
 	 * @return array
 	 */
-	public function findBy( $field, $value, $order = null, $limit = 0, $offset = 0 );
+	public function findBy( $property, $value, $order = null, $limit = 0, $offset = 0 );
 
 	/**
-	 * Find the first entity whose $field has value $value, with optional ordering.
-	 * @param  string $field the field to test
-	 * @param  mixed  $value the value the matching field should have
+	 * Find the first entity whose $property has value $value, with optional ordering.
+	 * @param  string $property the property to test
+	 * @param  mixed  $value    the value the matching property should have
 	 * @param  string $order
 	 * @return Entity|false
 	 */
-	public function findFirstBy( $field, $value, $order = null );
+	public function findFirstBy( $property, $value, $order = null );
 
 }
 

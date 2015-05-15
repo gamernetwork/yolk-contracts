@@ -15,16 +15,16 @@ interface Mappable {
 
 	/**
 	 * Insert/set data into the mappable object.
-	 * @return void
+	 * @return self
 	 */
 	public function setData( array $data );
 
 	/**
 	 * Return the data from the mappable object - optionally only the data that has changed.			
 	 * @param  boolean $changed_only   if true only the data that has changed will be returned.
-	 * @return void
+	 * @return array
 	 */
-	public function getData( $changed_only = true );
+	public function getData( $changed_only = false );
 
 }
 

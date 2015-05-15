@@ -14,22 +14,16 @@ namespace yolk\contracts\model;
 interface EntityMap {
 
 	/**
-	 * Return the class name of the object this is the map for.
+	 * Return the class name of the entity this is the map for.
 	 * @return string
 	 */
-	public function getMappable();
+	public function getEntity();
 
 	/**
 	 * Return the table name the mappable object is stored in.
 	 * @return string
 	 */
 	public function getTable();
-
-	/**
-	 * Return the property name used as the unique key.
-	 * @return string
-	 */
-	public function getKeyName();
 
 	/**
 	 * Translate a property name into a storage field/column name.

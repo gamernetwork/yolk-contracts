@@ -29,7 +29,7 @@ interface Mapper {
 	 * @param Filter  $filter   criteria used to filter the items.
 	 * @return integer
 	 */
-	public function count( Filter $filter = null );
+	public function count( Filter $filter );
 
 	/**
 	 * Finds a set of items matching the specified filter.
@@ -40,10 +40,9 @@ interface Mapper {
 	public function find( Filter $filter, $fetch = true );
 
 	/**
-	 * Finds a set of items matching the specified filter.
-	 * @param Filter  $filter  criteria used to filter the items.
-	 * @param boolean $fetch   whether to return the item ids or complete entities.
-	 * @return Mappable[]
+	 * Fetch the set of items matching the specified ids.
+	 * @param array $ids
+	 * @return array
 	 */
 	public function fetch( array $ids );
 
