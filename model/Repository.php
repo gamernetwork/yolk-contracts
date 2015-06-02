@@ -11,12 +11,18 @@
 
 namespace yolk\contracts\model;
 
-use yolk\contracts\support\Collection;
+use yolk\contracts\support\collections\Set;
 
 /**
  * Repositories act as in-memory collections of entities.
  */
-interface Repository extends Collection {
+interface Repository extends Set {
+
+	/**
+	 * Return the name of the entity handled by the repository.
+	 * @return string
+	 */
+	public function getEntity();
 
 	/**
 	 * Find the entity with the specified id.
