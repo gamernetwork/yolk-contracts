@@ -15,16 +15,10 @@ use yolk\contracts\support\Arrayable;
 
 /**
  * Base collection interface.
- * Should not be implemented directly, instead use on of the more specific
- * sub-interfaces, such as Set or Dictionary
+ * Should not generally be implemented directly, instead use on of the more specific
+ * sub-interfaces, such as Set or Dictionary.
  */
-interface Collection extends Arrayable, \IteratorAggregate, \Countable {
-
-	/**
-	 * Return the number of items in the collection.
-	 * @return integer
-	 */
-	public function count();
+interface Collection extends \IteratorAggregate, \Countable {
 
 	/**
 	 * Determines if the collection is empty.
