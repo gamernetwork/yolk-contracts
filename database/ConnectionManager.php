@@ -43,6 +43,18 @@ interface ConnectionManager {
 	 */
 	public function has( $name );
 
+	/**
+	 * Return the default connection.
+	 * @return DatabaseConnection
+	 */
+	public function getDefault();
+
+	/**
+	 * Specify the default connection.
+	 * @param string $name name of the connection.
+	 */
+	public function setDefault( $name );
+
 }
 
 // EOF

@@ -31,6 +31,18 @@ interface DatabaseConnection {
 	public function isConnected();
 
 	/**
+	 * Return a new Select query instance;
+	 * @return yolk\contracts\database\query\Select
+	 */
+	public function select();
+
+	/**
+	 * Return a new Insert query instance;
+	 * @return yolk\contracts\database\query\Insert
+	 */
+	public function insert();
+
+	/**
 	 * Perform a query against the database.
 	 * Prepared statements are cached so each query will only be prepared once per the object's lifetime.
 	 * Supports positional (?) and named (:name) parameter formats, see the PDO docs for more info.
@@ -143,15 +155,23 @@ interface DatabaseConnection {
 	public function insertId( $name = '' );
 
 	/**
-	 * Escape a value so it can be embedded in a query.
-	 * This is only required where values are being directly inbedded in the SQL string,
+	 * Quote a value so it can be embedded in a query.
+	 * This is only required where values are being directly embedded in the SQL string,
 	 * values passed as parameters to a query will be escaped automatically.
 	 *
-	 * @param   mixed     $value   the value to escape.
+	 * @param   mixed     $value   the value to quote.
 	 * @param   integer   $type    one of the PDO::PARAM_* constants indicating the datatype of $value.
 	 * @return  string
 	 */
-	public function escape( $value, $type = \PDO::PARAM_STR );
+	public function quote( $value, $type = \PDO::PARAM_STR );
+
+	/**
+	 * Quote an identifier value so it can be embedded in a query.
+	 *
+	 * @param   mixed     $name   the name of the idendifier.
+	 * @return  string
+	 */
+	public function quoteIdentifier( $name );
 
 }
 
