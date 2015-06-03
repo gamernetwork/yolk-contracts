@@ -43,6 +43,18 @@ interface DatabaseConnection {
 	public function insert();
 
 	/**
+	 * Return a new Update query instance;
+	 * @return yolk\contracts\database\query\Update
+	 */
+	public function update();
+
+	/**
+	 * Return a new Delete query instance;
+	 * @return yolk\contracts\database\query\Delete
+	 */
+	public function delete();
+
+	/**
 	 * Perform a query against the database.
 	 * Prepared statements are cached so each query will only be prepared once per the object's lifetime.
 	 * Supports positional (?) and named (:name) parameter formats, see the PDO docs for more info.
