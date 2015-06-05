@@ -55,6 +55,13 @@ interface DatabaseConnection {
 	public function delete();
 
 	/**
+	 * Create a prepared statement.
+	 * @param  \PDOStatement|string  $statement  an existing PDOStatement object or a SQL string.
+	 * @return \PDOStatement
+	 */
+	public function prepare( $statement );
+
+	/**
 	 * Perform a query against the database.
 	 * Prepared statements are cached so each query will only be prepared once per the object's lifetime.
 	 * Supports positional (?) and named (:name) parameter formats, see the PDO docs for more info.
