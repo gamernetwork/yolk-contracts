@@ -18,7 +18,7 @@ interface Dispatcher {
 	 * @param $request
 	 * @return  the response to the request
 	 */
-	public function dispatch( $request );
+	public function dispatch( Request $request );
 
 }
 
