@@ -11,15 +11,14 @@
 
 namespace yolk\contracts\app;
 
-use yolk\contracts\support\Runnable;
-
-interface Application extends Runnable {
+interface Module extends Dispatcher {
 
 	/**
 	 * Perform initialisation functions as required.
 	 * @return self
 	 */
 	public function init();
+
 }
 
 // EOF

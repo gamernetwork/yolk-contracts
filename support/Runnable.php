@@ -3,23 +3,25 @@
  * This file is part of Yolk - Gamer Network's PHP Framework.
  *
  * Copyright (c) 2015 Gamer Network Ltd.
- * 
+ *
  * Distributed under the MIT License, a copy of which is available in the
  * LICENSE file that was bundled with this package, or online at:
  * https://github.com/gamernetwork/yolk-contracts
  */
 
-namespace yolk\contracts\app;
+namespace yolk\contracts\support;
 
-use yolk\contracts\support\Runnable;
-
-interface Application extends Runnable {
+/**
+ * Interface to indicate an object instance can be executed in a 
+ */
+interface Runnable {
 
 	/**
-	 * Perform initialisation functions as required.
-	 * @return self
+	 * Run the command.
+	 * @return mixed
 	 */
-	public function init();
+	public function run();
+
 }
 
 // EOF
