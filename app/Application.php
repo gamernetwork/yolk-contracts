@@ -15,11 +15,6 @@ use yolk\contracts\support\Runnable;
 
 interface Application extends Runnable {
 
-	/**
-	 * Perform initialisation functions as required.
-	 * @return self
-	 */
-	public function init();
 }
 
 // EOF

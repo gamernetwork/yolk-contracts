@@ -13,12 +13,6 @@ namespace yolk\contracts\app;
 
 interface Module extends Dispatcher {
 
-	/**
-	 * Perform initialisation functions as required.
-	 * @return self
-	 */
-	public function init();
-
 }
 
 // EOF
