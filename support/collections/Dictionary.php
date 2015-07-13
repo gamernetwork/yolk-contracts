@@ -23,19 +23,20 @@ interface Dictionary extends Collection {
 	 */
 	public function has( $key );
 
-	/**
-	 * Determines if the specified item is in the dictionary.
-	 * @param  mixed $item
-	 * @return boolean
+	/** Return the value assigned to the specified key.
+	 * 
+	 * @param string key
+	 * @param mixed  default   value returned if key doesn't exist
+	 * @return mixed
 	 */
-	public function get( $key );
+	public function get( $key, $default = null );
 
 	/**
-	 * Add a new item to the dictionary.
+	 * Assign a value to the specified key.
 	 * @param mixed $item
 	 * @return mixed   the existing item assigned to key, or null if key doesn't exist
 	 */
-	public function add( $key, $item );
+	public function set( $key, $item );
 
 	/**
 	 * Remove the specified item from the dictionary.
