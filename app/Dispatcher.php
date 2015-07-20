@@ -16,7 +16,7 @@ interface Dispatcher {
 	/**
 	 * Dispatches the specified request.
 	 * @param $request
-	 * @return  the response to the request
+	 * @return Response the response to the request
 	 */
 	public function dispatch( Request $request );
 
