@@ -20,7 +20,7 @@ trait LoggerAwareTrait {
 
 	/**
 	 * Log instance.
-	 * @var Psr\Log\LoggerInterface
+	 * @var \Psr\Log\LoggerInterface
 	 */
 	protected $log;
 	

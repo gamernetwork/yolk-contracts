@@ -18,7 +18,7 @@ interface Dictionary extends Collection {
 
 	/**
 	 * Determines if the specified item is in the dictionary.
-	 * @param  mixed $item
+	 * @param  mixed $key
 	 * @return boolean
 	 */
 	public function has( $key );
