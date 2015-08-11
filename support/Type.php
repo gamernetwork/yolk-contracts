@@ -27,6 +27,7 @@ class Type {
 
 	// text types
 	const TEXT       = 'text';
+	const SLUG       = 'slug';
 	const IP         = 'ip';
 	const EMAIL      = 'email';
 	const URL        = 'url';
@@ -40,6 +41,8 @@ class Type {
 	const JSON       = 'json';
 	const CUSTOM     = 'custom';
 	const OBJECT     = 'object';
+	const ENTITY     = 'entity';
+	const COLLECTION = 'collection';
 
 	private function __construct() {}
 
