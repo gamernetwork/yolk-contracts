@@ -47,6 +47,13 @@ interface Mapper {
 	public function fetch( array $ids );
 
 	/**
+	 * Determines if a mappable item breaks any unique constraints.
+	 * @param  Mappable $mappable
+	 * @return array   return an array of properties that break unique constraints
+	 */
+	public function exists( Mappable $mappable );
+
+	/**
 	 * Store a mappable object in the underlying datastore.
 	 * @param  Mappable $mappable
 	 * @return self
