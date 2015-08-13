@@ -33,12 +33,6 @@ interface Entity extends Mappable {
 	 */
 	public function isValid();
 
-	/**
-	 * Validate the state of the entity.
-	 * @return array an array of errors
-	 */
-	public function validate();
-
 
 	public function getErrors();
 
