@@ -26,6 +26,12 @@ interface Mappable {
 	 */
 	public function getData( $changed_only = false );
 
+	/**
+	 * Inform the mappable object that is has been synced to the underlying storage.
+	 * @return void
+	 */
+	public function markClean();
+
 }
 
 // EOF
