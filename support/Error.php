@@ -57,6 +57,7 @@ class Error {
 			Type::URL       => static::URL,
 			Type::JSON      => static::JSON,
 			Type::OBJECT    => static::VALUE,
+			Type::ENTITY    => static::VALUE,
 		];
 
 		return isset($data[$type]) ? $data[$type] : static::VALUE;
