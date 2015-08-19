@@ -18,7 +18,7 @@ use yolk\contracts\support\Arrayable;
  * Should not generally be implemented directly, instead use on of the more specific
  * sub-interfaces, such as Set or Dictionary.
  */
-interface Collection extends \IteratorAggregate, \Countable {
+interface Collection extends \Traversable, \Countable {
 
 	/**
 	 * Determines if the collection is empty.
