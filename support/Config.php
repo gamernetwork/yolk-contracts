@@ -21,7 +21,7 @@ interface Config extends collections\Dictionary {
 	 * @return self
 	 * @throws \LogicException if $config is not defined or not an array
 	 */
-	public function load( $file );
+	public function load( $file, $key = '' );
 
 	/**
 	 * Merge an array into the current configuration.
