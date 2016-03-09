@@ -11,7 +11,20 @@
 
 namespace yolk\contracts\app;
 
+/**
+ * A module is a re-usable micro application in Yolk, used for partitioning
+ * functioanlity.
+ * It can be delegated to for route dispatch and can declare it's own view
+ * search path.
+ */
 interface Module extends Dispatcher {
+	/**
+	 * Return a view path for this module. The order is significant: views paths are searched
+	 * forwards
+	 *
+	 * @return array An array of 'namespace' => 'path' pairs
+	 */
+	public function buildViewConfig();
 
 }
 
