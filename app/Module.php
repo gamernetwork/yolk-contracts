@@ -18,9 +18,10 @@ namespace yolk\contracts\app;
  * search path.
  */
 interface Module extends Dispatcher {
+
 	/**
-	 * Return a view path for this module. The order is significant: views paths are searched
-	 * forwards
+	 * Return a view path for this module. The order is significant - views paths
+	 * are searched forwards
 	 *
 	 * @return array An array of 'namespace' => 'path' pairs
 	 */
