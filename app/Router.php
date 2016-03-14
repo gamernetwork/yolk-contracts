@@ -25,6 +25,12 @@ interface Router {
 	public function addRoute( $regex, $action, $extra = [] );
 
 	/**
+	 * Return an array of defined routes.
+	 * @return array
+	 */
+	public function getRoutes();
+
+	/**
 	 * Turn a controller action into a URL
 	 * @param string $action      controller action spec (like JobsController/index)
 	 * @param array  $args        positional arguments for url (e.g. job id) as strings
@@ -32,11 +38,12 @@ interface Router {
 	public function reverse( $action, $args = [] );
 
 	/**
-	 * Find a route that matches the specified Request.
-	 * @param string $uri      URI to be matched.
+	 * Determine if a route matches the specifies request.
+	 * @param array  $route    the route to be tested
+	 * @param string $uri      URI to be tested.
 	 * @param string $method   HTTP method the URI request was made with.
 	 */
-	public function match( $uri, $method = 'GET' );
+	public function test( $route, $uri, $method );
 
 }
 
