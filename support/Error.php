@@ -14,6 +14,7 @@ namespace yolk\contracts\support;
 class Error {
 	
 	const NONE      = false;
+	const TEXT      = 'encoding';
 	const INTEGER   = 'integer';
 	const FLOAT     = 'float';
 	const BOOLEAN   = 'boolean';
@@ -44,6 +45,7 @@ class Error {
 	public static function getTypeError( $type ) {
 
 		$data = [
+			Type::TEXT      => static::TEXT,
 			Type::INTEGER   => static::INTEGER,
 			Type::FLOAT     => static::FLOAT,
 			Type::BOOLEAN   => static::BOOLEAN,
