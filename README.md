@@ -41,3 +41,20 @@ and you may easily write alternatives that better suit your project.
 Likewise, you can switch between implementations without modifying any consuming
 code. The classic example being able to switch caching backends (e.g. Memory/Redis/Memcache)
 without modifying any code that uses the cache.
+
+## Naming Conventions
+
+Interfaces in this package are named in one of two ways:
+
+* As a singular noun (e.g. `Dictionary`, `DatabaseConnection`, `Filter`)
+* As a noun or verb suffixed with "-able" (e.g. `Arrayable`, `Runnable`)
+
+The implementations of those interfaces with in Yolk components are usually
+prefixed with "Base-", although there are some variations - in particular
+some implementations still use the deprecated prefix "Generic-".
+
+* `Request` ➡ `BaseRequest`
+* `Response` ➡ `BaseResponse`
+* `DatabaseConnection` ➡ `BaseConnection`
+* `ConnectionManager` ➡ `GenericConnectionManager`
+* `Profiler` ➡ `GenericProfiler`
